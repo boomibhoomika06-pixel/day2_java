@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class MathFunctions {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float floatValue = sc.nextFloat();
+        int intValue = sc.nextInt();
+        int baseValue = sc.nextInt();
+        int exponentValue = sc.nextInt();
+
+        int floorValue = (int) Math.floor(floatValue);
+        int ceilValue = (int) Math.ceil(floatValue);
+        int roundedValue = Math.round(floatValue);
+        int sqrtValue = (int) Math.sqrt(intValue);
+        int powerValue = (int) Math.pow(baseValue, exponentValue);
+
+        System.out.println(floorValue);
+        System.out.println(ceilValue);
+        System.out.println(roundedValue);
+        System.out.println(sqrtValue);
+        System.out.println(powerValue);
+    }
+}
