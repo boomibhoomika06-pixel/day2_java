@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class TrainFareCalculator {
+    public static void main(String[] args) {
+      
+        Scanner scanner = new Scanner(System.in);
+        int age = scanner.nextInt();
+        int distance = scanner.nextInt();
+        scanner.close();
+        
+        double standardFarePerKm = 5.0;
+        double fareRate = 1.0;
+        if (age < 12) {
+            fareRate = 0.5;
+        } else if (age >= 60) {
+            fareRate = 0.75;
+        } else {
+            fareRate = 1.0;
+        }
+        double totalFare = distance * standardFarePerKm * fareRate;
+        System.out.println((int) totalFare);
+    }
+}
